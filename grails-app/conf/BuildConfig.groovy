@@ -36,7 +36,8 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.16'
         runtime 'postgresql:postgresql:9.1-901.jdbc4'
         runtime 'org.swinglabs:pdf-renderer:1.0.5'
-        runtime 'org.apache.tika:tika-app:1.0'
+        runtime 'org.apache.tika:tika-core:1.0'
+		runtime 'org.apache.tika:tika-parsers:1.0'
     }
 
     plugins {
