@@ -23,7 +23,7 @@
         <g:message code="document.title.label" default="Title"/>
 
     </label>
-    <g:textField style="width: 640px" name="title" value="${documentInstance?.title}"/>
+    <g:textField name="title" value="${documentInstance?.title}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'author', 'error')} ">
@@ -65,14 +65,37 @@
     </label>
     <g:textField name="created" value="${documentInstance?.created}"/>
 </div>
-%{--
 
+<!--
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'content', 'error')} ">
-	<label for="content">
-		<g:message code="document.content.label" default="Content" />
-		
-	</label>
-	<g:textArea name="content" cols="40" rows="5" maxlength="32670" value="${documentInstance?.content}"/>
+    <label for="content">
+<g:message code="document.content.label" default="Content"/>
+
+</label>
+<g:textArea name="content" cols="40" rows="5" maxlength="32670" value="${documentInstance?.content}"/>
+</div>
+-->
+<div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'number', 'error')} ">
+    <label for="number">
+        <g:message code="document.number.label" default="Number"/>
+
+    </label>
+    <g:field type="number" name="number" value="${fieldValue(bean: documentInstance, field: 'number')}"/>
 </div>
 
---}%
+<div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'publicationMonth', 'error')} ">
+    <label for="publicationMonth">
+        <g:message code="document.publicationMonth.label" default="Publication Month"/>
+
+    </label>
+    <g:select name="publicationMonth" from="${documentInstance.constraints.publicationMonth.inList}" value="${documentInstance?.publicationMonth}" valueMessagePrefix="document.publicationMonth" noSelection="['': '']"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'publicationYear', 'error')} ">
+    <label for="publicationYear">
+        <g:message code="document.publicationYear.label" default="Publication Year"/>
+
+    </label>
+    <g:field type="number" name="publicationYear" value="${fieldValue(bean: documentInstance, field: 'publicationYear')}"/>
+</div>
+

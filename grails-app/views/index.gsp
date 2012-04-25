@@ -6,6 +6,7 @@
     <title>Welcome to Grails</title>
 
 
+
     <g:javascript library="jquery"/>
     <jqui:resources/>
 
@@ -125,11 +126,16 @@
 </head>
 
 <body>
+<div style="visibility: hidden;">
+    ${virlib.Document.executeUpdate("Delete from Document d where d.title=' '")}
+</div>
 <a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 
 <g:if test="${flash.message}">
     <div class="message">${flash.message}</div>
 </g:if>
+
+
 
 <div id="status" role="complementary">
     <h1>SOPAC Virtual Library</h1>
@@ -173,7 +179,7 @@
     </div>
 
 
-    <div width="90%" align="left" style="margin-left: 50px; margin-top: 250px">
+    <div width="90%" align="left" style="margin-left: 40px; margin-top: 250px">
         <h1 style="margin-left: -50px; margin-bottom: 15px">Search Documents</h1>
         <g:form controller="searchable">
             <g:textField style="width: 480px" name="q" class="ui-state-default ui-corner-all"/>
@@ -190,20 +196,28 @@
         </tr>
         <tr style="background-color: #ffffff;">
             <td>
+
                 <g:each in="${Document.list(max: 9, sort: 'created', order: 'desc')}" var="d" status="i">
                     ${i + 1}.
                     <span align="right" style="text-align: right; margin-left: 20px">
-                        <a style="color: blue;  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId}) ${d.title.substring(0, 58)}...</a>
+                        <a style="color: blue;  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
+                        <g:if test="${d.title.length() >= 58}">
+                            ${d.title.substring(0, 58)}
+                        </g:if>
+                        <g:else>
+                            ${d.title}
+                        </g:else>
+                        ...</a>
                         <br/>
                     </span>
 
                 </g:each>
             </td>
             <td>
-                <br/>
                 <a style="color: gray; text-decoration: none" href="${createLink(controller: 'document')}">Documents</a><br/><br/>
                 <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
                 <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
+                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
                 <a style="color: gray; text-decoration: none" href="${createLink(controller: 'login')}">Usage Reports</a><br/><br/>
                 %{--<i>Not Logged In</i>--}%
             </td>
@@ -225,5 +239,6 @@
     </div>
     -->
 </div>
+
 </body>
 </html>

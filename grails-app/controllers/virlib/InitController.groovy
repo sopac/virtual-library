@@ -45,9 +45,17 @@ class InitController {
                 if (content.length() > 32670) content = content.substring(0, 32670)
 
                 String reportId = filename.toUpperCase().substring(0, filename.indexOf("."))
+                if (!reportId.endsWith("0")) {
+                    reportId = reportId.replaceAll("0", "").trim()
+                } else {
+                    reportId = reportId.replaceAll("00", "").trim()
+                    reportId = reportId.replaceAll("000", "").trim()
+                    reportId = reportId.replaceAll("0000", "").trim()
+                }
                 if (author != null && title != null) {
                     Document d = new Document()
                     d.reportId = reportId
+                    d.number = Integer.valueOf(d.reportId.substring(2, d.reportId.length()).trim())
                     d.title = title
                     d.author = author
                     d.noOfPages = pages
@@ -56,11 +64,16 @@ class InitController {
                     d.content = content
                     d.file = filename
 
+                    d.publicationYear = Integer.valueOf(d.created.substring(0, d.created.indexOf("-")).trim())
+                    def months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                    String m = d.created.substring(d.created.indexOf("-") + 1, d.created.lastIndexOf("-"))
+                    //println m
+                    d.publicationMonth = months[Integer.valueOf(m) - 1]
+
                     //get category
                     String code = filename.toUpperCase().substring(0, 2)
                     def list = virlib.Category.findAllByCode(code)
                     if (list.size() != 0) d.category = list.get(0)
-
 
                     d.save(failOnError: true, flush: true)
                 }

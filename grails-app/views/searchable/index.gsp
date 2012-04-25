@@ -21,7 +21,7 @@
     </ul>
 </div>
 
-<div id="header">
+<div align="left" style="margin-left: 20px" id="header">
     <h1>Search Results</h1>
     <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
         <g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search"/>
@@ -30,13 +30,14 @@
     </div>
 </div>
 
-<div id="main">
+<div align="left" style="margin-left: 20px" id="main">
     <g:set var="haveQuery" value="${params.q?.trim()}"/>
     <g:set var="haveResults" value="${searchResult?.results}"/>
     <div class="title">
         <span>
             <g:if test="${haveQuery && haveResults}">
                 <p style="font-weight: bolder;">
+                    <br/>
                     Showing <strong>${searchResult.offset + 1}</strong> - <strong>${searchResult.results.size() + searchResult.offset}</strong> of <strong>${searchResult.total}</strong>
                     results for <strong>${params.q}</strong>
                 </p>
@@ -94,21 +95,23 @@
     <g:if test="${haveResults}">
         <div class="results">
             <g:each var="result" in="${searchResult.results}" status="index">
-                <div class="result">
-                    <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}"/>
-                    <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}"/>
 
-                    <g:set var="desc" value="${result.toString()}"/>
-                    <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}"/></g:if>
-                    <div class="name"><a href="${link}">${desc.encodeAsHTML()}</a></div>
+                <g:if test="${Document.get(result.id) != null}">
 
+                    <div class="result">
+                        <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}"/>
+                        <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}"/>
 
-                    <div class="displayLink">${Document.get(result.id).author}, ${Document.get(result.id).created}</div>
+                        <g:set var="desc" value="${result.toString()}"/>
+                        <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}"/></g:if>
+                        <div class="name"><a href="${link}">${desc.encodeAsHTML()}</a></div>
 
-                    <g:set var="content" value="${Document.get(result.id).content.substring(0, 200)}"></g:set>
-                    <div style="color: gray">${content} ...</div>
-                </div>
+                        <div class="displayLink">${Document.get(result.id).author}, ${Document.get(result.id).created}</div>
 
+                        <g:set var="content" value="${Document.get(result.id).content.substring(0, 200)}"></g:set>
+                        <div style="color: gray">${content} ...</div>
+                    </div>
+                </g:if>
                 <br/>
             </g:each>
 
@@ -120,7 +123,7 @@
                     Page:
                     <g:set var="totalPages" value="${Math.ceil(searchResult.total / searchResult.max)}"/>
                     <g:if test="${totalPages == 1}"><span class="currentStep">1</span></g:if>
-                    <g:else><g:paginate controller="searchable" action="index" params="[q: params.q]" total="${searchResult.total}" prev="&lt; previous" next="next &gt;"/></g:else>
+                    <g:else><g:paginate controller="searchable" action="index" params="[q: params.q]" total="${searchResult.total}" prev=" &lt; previous " next=" next &gt; "/></g:else>
                 </g:if>
             </div>
         </div>

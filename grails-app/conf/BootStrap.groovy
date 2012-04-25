@@ -1,4 +1,5 @@
 import virlib.UserAccount
+import virlib.Document
 
 class BootStrap {
 
@@ -30,6 +31,9 @@ class BootStrap {
             u.administrator = true
             u.save(failOnError: true, flush: true)
         }
+
+
+
     }
     def destroy = {
     }

@@ -27,9 +27,14 @@
 
         <li class="fieldcontain">
             <span class="property-value" aria-labelledby="category-label">
-                <a href="${createLink(controller: 'download', params: [file: documentInstance.file, id: documentInstance.id])}">
-                    <g:img border="3px" style="height: 100px; border: 3px; border-color: #000000;" dir="images/thumbnail" file="${documentInstance.reportId}.jpg"/>
-                </a>
+                <g:if test="${documentInstance.file.trim().equals("")}">
+                    <p style="color: red">Restricted Document</p>
+                </g:if>
+                <g:else>
+                    <a href="${createLink(controller: 'download', params: [file: documentInstance.file, id: documentInstance.id])}">
+                        <g:img border="3px" style="height: 100px; border: 3px; border-color: #000000;" dir="images/thumbnail" file="${documentInstance.reportId}.jpg"/>
+                    </a>
+                </g:else>
             </span>
         </li>
 
@@ -102,6 +107,15 @@
                 <span id="created-label" class="property-label"><g:message code="document.created.label" default="Created"/></span>
 
                 <span class="property-value" aria-labelledby="created-label"><g:fieldValue bean="${documentInstance}" field="created"/></span>
+
+            </li>
+        </g:if>
+
+        <g:if test="${documentInstance?.publicationMonth}">
+            <li class="fieldcontain">
+                <span id="created-label" class="property-label"><g:message code="document.created.label" default="Published"/></span>
+
+                <span class="property-value" aria-labelledby="created-label"><g:fieldValue bean="${documentInstance}" field="publicationMonth"/>, ${documentInstance.publicationYear.encodeAsHTML()}</span>
 
             </li>
         </g:if>
