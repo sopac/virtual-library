@@ -112,8 +112,11 @@
                         <div class="name"><a href="${link}">${desc.encodeAsHTML()}</a></div>
 
                         <div class="displayLink">${Document.get(result.id).author}, ${Document.get(result.id).created}</div>
+                        <g:set var="content" value="${Document.get(result.id).content.toString().trim()}"/>
+                        <g:if test="${content.length() >= 200}">
+                            <g:set var="content" value="${Document.get(result.id).content.toString().trim().substring(0, 200)}"/>
+                        </g:if>
 
-                        <g:set var="content" value="${Document.get(result.id).content.substring(0, 200)}"></g:set>
                         <div style="color: gray">${content} ...</div>
                     </div>
                 </g:if>

@@ -37,7 +37,9 @@ grails.project.dependency.resolution = {
         runtime 'postgresql:postgresql:9.1-901.jdbc4'
         runtime 'org.swinglabs:pdf-renderer:1.0.5'
         runtime 'org.apache.tika:tika-core:1.0'
-		runtime 'org.apache.tika:tika-parsers:1.0'
+        runtime 'org.apache.tika:tika-parsers:1.0'
+        runtime 'org.apache.poi:poi:3.8'
+        runtime 'org.apache.ant:ant:1.8.3'
     }
 
     plugins {

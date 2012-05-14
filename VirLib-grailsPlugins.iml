@@ -55,6 +55,7 @@
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (VirLib-grailsPlugins)">
         <CLASSES>
+          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/postgresql/postgresql/jars/postgresql-9.1-901.jdbc4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.swinglabs/pdf-renderer/jars/pdf-renderer-1.0.5.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/jdom/jdom/jars/jdom-1.0.jar!/" />
@@ -67,7 +68,6 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.poi/poi-ooxml-schemas/jars/poi-ooxml-schemas-3.8-beta4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.poi/poi-ooxml/jars/poi-ooxml-3.8-beta4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.poi/poi-scratchpad/jars/poi-scratchpad-3.8-beta4.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.poi/poi/jars/poi-3.8-beta4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.bouncycastle/bcmail-jdk15/jars/bcmail-jdk15-1.45.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.pdfbox/jempbox/bundles/jempbox-1.6.0.jar!/" />
@@ -79,7 +79,9 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/edu.ucar/netcdf/jars/netcdf-4.2-min.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.tika/tika-parsers/bundles/tika-parsers-1.0.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.tika/tika-core/bundles/tika-core-1.0.jar!/" />
-          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/lib" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.8.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant/jars/ant-1.8.3.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.poi/poi/jars/poi-3.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

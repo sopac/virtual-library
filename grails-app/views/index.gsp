@@ -196,9 +196,9 @@
             </tr>
             <tr style="background-color: #ffffff;">
                 <td>
-                    <g:each in="${Document.list(max: 9, sort: 'number', order: 'desc')}" var="d" status="i">
-                        ${i + 1}.
-                        <span align="right" style="text-align: right; margin-left: 20px">
+                    <g:each in="${Document.list(max: 14, sort: 'number', order: 'desc')}" var="d" status="i">
+                    %{--${i + 1}.--}%
+                        <span align="right" style="text-align: left; margin-left: 0px">
                             <g:set var="color" value="blue"/>
                             <g:if test="${d.file.trim().equals("")}">
                                 <g:set var="color" value="red"/>
@@ -220,6 +220,7 @@
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" target="_blank" href="${createLink(controller: 'export')}">Export</a><br/><br/>
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'init', action: 'regenerate')}">Regenerate Thumbnails</a><br/><br/>
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'login')}">Usage Reports</a><br/><br/>
                     %{--<i>Not Logged In</i>--}%

@@ -2,104 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7032aadd-6c6b-4431-a63d-90dc92c94816" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/document/changeThumbnail.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/library.war" afterPath="$PROJECT_DIR$/target/library.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/GR1.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/GR1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/GR2.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/GR2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/GR3.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/GR3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/GR4.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/GR4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR1.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR11.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR12.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR13.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR14.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR15.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR16.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR17.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR18.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR19.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR2.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR21.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR21.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR22.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR22.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR23.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR23.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR24.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR24.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR25.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR25.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR26.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR26.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR27.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR27.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR28.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR28.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR29.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR29.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR3.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR31.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR31.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR32.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR32.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR33.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR33.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR34.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR34.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR35.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR35.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR36.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR36.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR37.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR37.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR38.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR38.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR39.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR39.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR41.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR41.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR42.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR42.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR43.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR43.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR44.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR44.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR45.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR45.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR46.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR46.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR47.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR47.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR48.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR48.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR49.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR49.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR5.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR51.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR51.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR52.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR52.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR53.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR53.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR54.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR54.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR55.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR55.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR56.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR56.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR57.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR57.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR58.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR58.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR59.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR59.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR6.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR62.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR62.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR63.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR63.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR64.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR64.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR65.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR65.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR67.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR67.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR68.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR68.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR69.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR69.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR7.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR71.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR71.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR8.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/IR9.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/IR9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR1.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR11.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR12.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR15.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR16.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR18.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR2.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR24.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR24.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR26.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR26.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR3.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR34.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR34.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR4.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR41.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR41.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR5.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR6.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR7.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR8.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR84.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR84.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/thumbnail/PR8444.jpg" afterPath="$PROJECT_DIR$/web-app/images/thumbnail/PR8444.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/virlib/DocumentController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/virlib/DocumentController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/document/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/document/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/document/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/document/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/document/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/document/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VirLib-grailsPlugins.iml" afterPath="$PROJECT_DIR$/VirLib-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VirLib.iml" afterPath="$PROJECT_DIR$/VirLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/searchable/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/searchable/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/org/sopac/virlib/ThumbnailGenerator.java" afterPath="$PROJECT_DIR$/src/java/org/sopac/virlib/ThumbnailGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/userAccount/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/userAccount/list.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="VirLib.iws" />
@@ -163,21 +74,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <file leaf-file-name="ExportController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/ExportController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="64" selection-start="6305" selection-end="6305" vertical-scroll-proportion="-9.916667">
+            <state line="64" column="35" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-15.521739">
               <folding>
-                <marker date="1336950655000" expanded="true" signature="5036:5048" placeholder="{...}" />
+                <element signature="e#16#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DownloadController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="28" selection-start="418" selection-end="1417" vertical-scroll-proportion="-12.391304">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/virlib/Category.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Document.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="67" selection-start="287" selection-end="287" vertical-scroll-proportion="-1.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="80" selection-start="7316" selection-end="7316" vertical-scroll-proportion="-10.0">
+              <folding>
+                <marker date="1336957257000" expanded="true" signature="5036:5048" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/DocumentController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="67" selection-start="497" selection-end="497" vertical-scroll-proportion="0.44715446">
+            <state line="100" column="70" selection-start="3647" selection-end="3647" vertical-scroll-proportion="-3.9130435">
               <folding>
                 <element signature="e#16#56#0" expanded="true" />
               </folding>
@@ -185,21 +140,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/document/show.gsp">
+      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="85" selection-start="7140" selection-end="7140" vertical-scroll-proportion="-8.723404">
-              <folding>
-                <marker date="1336951802000" expanded="true" signature="1617:1667" placeholder="{...}" />
-              </folding>
+            <state line="36" column="59" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeThumbnail.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/document/changeThumbnail.gsp">
+      <file leaf-file-name="list.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/userAccount/list.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="59" selection-start="1054" selection-end="1054" vertical-scroll-proportion="-8.042553">
+            <state line="48" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.8695652">
               <folding />
             </state>
           </provider>
@@ -208,26 +161,10 @@
       <file leaf-file-name="InitController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="25" selection-start="6127" selection-end="6347" vertical-scroll-proportion="-1.3043479">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThumbnailGenerator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/org/sopac/virlib/ThumbnailGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="36" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="73" selection-start="2154" selection-end="2154" vertical-scroll-proportion="-19.291666">
-              <folding />
+            <state line="151" column="25" selection-start="6127" selection-end="6347" vertical-scroll-proportion="-29.347826">
+              <folding>
+                <element signature="e#16#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,22 +182,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/document/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/userAccount/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/document/list.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/searchable/index.gsp" />
         <option value="$PROJECT_DIR$/src/groovy/RenameFiles.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/document/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/document/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/document/changeThumbnail.gsp" />
         <option value="$PROJECT_DIR$/src/java/org/sopac/virlib/ThumbnailGenerator.java" />
         <option value="$PROJECT_DIR$/grails-app/controllers/virlib/DocumentController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/searchable/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/virlib/ExportController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/userAccount/list.gsp" />
       </list>
     </option>
   </component>
@@ -343,7 +280,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-app" />
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,11 +298,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web-app" />
+              <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userAccount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,105 +320,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VirLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VirLib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="virlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="document" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VirLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,6 +365,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="virlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VirLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VirLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -800,7 +687,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7060561" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -811,7 +698,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.49756494" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293944" sideWeight="0.49675325" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293944" sideWeight="0.49675325" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -892,63 +779,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/searchable/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="65" selection-start="4142" selection-end="4142" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/groovy/Global.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="216" selection-end="216" vertical-scroll-proportion="0.3146853" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/concurrent/ThreadPoolExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="0" selection-start="7983" selection-end="7983" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="67" selection-start="287" selection-end="287" vertical-scroll-proportion="-1.7777778" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.08461539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="79" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.8108108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/document/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.7966102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/LoginController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="0.04784689">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="64" selection-start="6305" selection-end="6305" vertical-scroll-proportion="-9.916667">
-          <folding>
-            <marker date="1336950655000" expanded="true" signature="5036:5048" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,47 +795,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/document/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="85" selection-start="7140" selection-end="7140" vertical-scroll-proportion="-8.723404">
+        <state line="154" column="85" selection-start="7140" selection-end="7140" vertical-scroll-proportion="1.0485934">
           <folding>
-            <marker date="1336951802000" expanded="true" signature="1617:1667" placeholder="{...}" />
+            <marker date="1336951802000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="73" selection-start="2154" selection-end="2154" vertical-scroll-proportion="-19.291666">
+        <state line="42" column="73" selection-start="2154" selection-end="2154" vertical-scroll-proportion="1.1183575">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/document/changeThumbnail.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="59" selection-start="1054" selection-end="1054" vertical-scroll-proportion="-8.042553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="25" selection-start="6127" selection-end="6347" vertical-scroll-proportion="-1.3043479">
+        <state line="28" column="59" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.96675193">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/org/sopac/virlib/ThumbnailGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="36" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.0">
+        <state line="107" column="36" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.76053214">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/searchable/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="0" selection-start="6347" selection-end="6347" vertical-scroll-proportion="0.91525424">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/InitController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="25" selection-start="6127" selection-end="6347" vertical-scroll-proportion="-29.347826">
+          <folding>
+            <element signature="e#16#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/virlib/Category.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/virlib/Document.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="67" selection-start="287" selection-end="287" vertical-scroll-proportion="-1.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/DownloadController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="418" selection-end="1417" vertical-scroll-proportion="-12.391304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/ExportController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="35" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-15.521739">
+          <folding>
+            <element signature="e#16#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="80" selection-start="7316" selection-end="7316" vertical-scroll-proportion="-10.0">
+          <folding>
+            <marker date="1336957257000" expanded="true" signature="5036:5048" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/virlib/DocumentController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="67" selection-start="497" selection-end="497" vertical-scroll-proportion="0.44715446">
+        <state line="100" column="70" selection-start="3647" selection-end="3647" vertical-scroll-proportion="-3.9130435">
           <folding>
             <element signature="e#16#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="59" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/userAccount/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.8695652">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,7 +914,7 @@
         <entry key="VirLib">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="-794863218" />
+              <option name="buildConfigCrc" value="637250413" />
               <option name="pluginDependenciesCrc" value="660804191" />
               <option name="properties">
                 <map>
