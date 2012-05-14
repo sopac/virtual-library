@@ -18,12 +18,12 @@ class Document {
 
     static constraints = {
         category()
-        reportId()
+        reportId(unique: true)
         title()
         author()
-        file()
-        size()
-        noOfPages()
+        file(blank: true)
+        size(blank: true)
+        noOfPages(blank: true)
         created(nullable: true, blank: true)
         content(nullable: true, maxSize: 32670)
         number(nullable: true)

@@ -152,6 +152,8 @@
 
             <g:if test="${session.user != null}">
                 <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
+                <g:hiddenField name="reportId" value="${documentInstance.reportId}"/>
+                <g:actionSubmit class="edit" action="changeThumbnail" value="Change Thumbnail"/>
             </g:if>
         </fieldset>
     </g:form>

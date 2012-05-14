@@ -30,8 +30,10 @@
 <div class="footer" role="contentinfo">
     <g:if test="${session.user != null}">
         <a href="${createLink(controller: 'login', action: 'logout')}">${session.user} Logout</a>
-
     </g:if>
+    <g:else>
+        <a href="${createLink(controller: 'login')}">Login for additional features</a>
+    </g:else>
     <p align="center">
         Applied GeoScience and Technology Division, SPC, 2012
     </p>

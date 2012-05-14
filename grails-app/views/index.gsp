@@ -187,54 +187,94 @@
         </g:form>
     </div>
 
+<!-- logged in -->
+    <g:if test="${session.user != null}">
+        <table id="sdsds" align="left" style="width: 90%;border-top: 0px;align: left; margin-left: -15px">
+            <tr>
+                <td style="width: 70%"><h1>Recent Documents</h1></td>
+                <td><h1>For Administrators</h1></td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td>
+                    <g:each in="${Document.list(max: 9, sort: 'number', order: 'desc')}" var="d" status="i">
+                        ${i + 1}.
+                        <span align="right" style="text-align: right; margin-left: 20px">
+                            <g:set var="color" value="blue"/>
+                            <g:if test="${d.file.trim().equals("")}">
+                                <g:set var="color" value="red"/>
+                            </g:if>
+                            <a style="color: ${color};  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
+                            <g:if test="${d.title.length() >= 52}">
+                                ${d.title.substring(0, 52)}
+                            </g:if>
+                            <g:else>
+                                ${d.title}
+                            </g:else>
+                            ...</a>
+                            <br/>
+                        </span>
+                    </g:each>
+                </td>
+                <td>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'document')}">Documents</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'init', action: 'regenerate')}">Regenerate Thumbnails</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'login')}">Usage Reports</a><br/><br/>
+                    %{--<i>Not Logged In</i>--}%
+                </td>
+            </tr>
+        </table>
+    </g:if>
 
-    <table id="sdsds" align="left" style="width: 90%;border-top: 0px;align: left; margin-left: -15px">
-        <tr>
-            <td style="width: 80%"><h1>Recent Documents</h1></td>
-            <td><h1>Manage</h1></td>
 
-        </tr>
-        <tr style="background-color: #ffffff;">
-            <td>
-
-                <g:each in="${Document.list(max: 9, sort: 'created', order: 'desc')}" var="d" status="i">
-                    ${i + 1}.
-                    <span align="right" style="text-align: right; margin-left: 20px">
-                        <a style="color: blue;  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
-                        <g:if test="${d.title.length() >= 58}">
-                            ${d.title.substring(0, 58)}
-                        </g:if>
-                        <g:else>
-                            ${d.title}
-                        </g:else>
-                        ...</a>
-                        <br/>
-                    </span>
-
-                </g:each>
-            </td>
-            <td>
-                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'document')}">Documents</a><br/><br/>
-                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
-                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
-                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
-                <a style="color: gray; text-decoration: none" href="${createLink(controller: 'login')}">Usage Reports</a><br/><br/>
-                %{--<i>Not Logged In</i>--}%
-            </td>
-        </tr>
-    </table>
-
+<!-- not logged in -->
+    <g:if test="${session.user == null}">
+        <table id="sdsds" align="left" style="width: 90%;border-top: 0px;align: left; margin-left: -15px">
+            <tr>
+                <td style="width: 100%"><h1>Recent Documents</h1></td>
+                <td></td>
+            </tr>
+            <tr style="background-color: #ffffff;">
+                <td>
+                    <g:each in="${Document.list(max: 9, sort: 'number', order: 'desc')}" var="d" status="i">
+                        ${i + 1}.
+                        <span align="right" style="text-align: right; margin-left: 10px">
+                            <g:set var="color" value="blue"/>
+                            <g:if test="${d.file.trim().equals("")}">
+                                <g:set var="color" value="red"/>
+                            </g:if>
+                            <a style="color: ${color};  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
+                            <g:if test="${d.title.length() >= 78}">
+                                ${d.title.substring(0, 78)}
+                            </g:if>
+                            <g:else>
+                                ${d.title}
+                            </g:else>
+                            ...</a>
+                            <br/>
+                        </span>
+                    </g:each>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </g:if>
 
 
 
 
-    <!--
+
+
+<!--
     <div id="controller-list" role="navigation">
         <h2>Available Controllers:</h2>
         <ul>
             <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName }}">
-        <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-    </g:each>
+    <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+</g:each>
         </ul>
     </div>
     -->

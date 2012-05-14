@@ -35,6 +35,8 @@
 
             <g:sortableColumn params="[code: code]" property="reportId" title="${message(code: 'document.reportId.label', default: 'Report Id')}"/>
 
+            <g:sortableColumn params="[code: code]" property="reportId" title="${message(code: 'document.reportId.label', default: 'Published')}"/>
+
             <g:sortableColumn params="[code: code]" property="title" title="${message(code: 'document.title.label', default: 'Title')}"/>
 
             <g:sortableColumn params="[code: code]" property="author" title="${message(code: 'document.author.label', default: 'Author')}"/>
@@ -48,6 +50,9 @@
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
                 <td>${fieldValue(bean: documentInstance, field: "reportId")}</td>
+
+                <td>${fieldValue(bean: documentInstance, field: "publicationMonth")},<br/>${documentInstance.publicationYear}
+                </td>
 
                 <td><g:link action="show" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link></td>
 

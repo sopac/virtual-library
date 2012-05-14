@@ -3,6 +3,7 @@ package virlib
 import org.apache.tika.metadata.Metadata
 import org.apache.tika.parser.pdf.PDFParser
 import org.apache.tika.sax.BodyContentHandler
+import org.sopac.virlib.ThumbnailGenerator
 import org.springframework.dao.DataIntegrityViolationException
 import org.xml.sax.ContentHandler
 
@@ -12,6 +13,28 @@ class DocumentController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+    def changeThumbnail() {
+        [reportId: params.reportId]
+    }
+
+    def uploadThumbnail() {
+        def f = request.getFile('thumbfile')
+        if (f.empty) {
+            flash.message = 'file cannot be empty'
+            render(view: 'create')
+            return
+        }
+        String path = servletContext.getRealPath("images/thumbnail/") + "/"
+        File file = new File(path + params.reportId.trim() + ".jpg");
+        f.transferTo(file)
+
+        //resize
+        ThumbnailGenerator.resize(file.getAbsolutePath().toString());
+        flash.message = "Thumbnail changed..."
+        Document d = Document.findByReportId(params.reportId.trim())
+        redirect(action: 'show', id: d.id)
+
+    }
 
     def upload() {
         def f = request.getFile('docfile')
@@ -57,8 +80,17 @@ class DocumentController {
             if (content.length() > 32670) content = content.substring(0, 32670)
 
             String reportId = filename.toUpperCase().substring(0, filename.indexOf("."))
-            reportId = reportId.replaceAll("0", "").trim()
+
+            if (!reportId.endsWith("0")) {
+                reportId = reportId.replaceAll("0", "").trim()
+            } else {
+                reportId = reportId.replaceAll("00", "").trim()
+                reportId = reportId.replaceAll("000", "").trim()
+                reportId = reportId.replaceAll("0000", "").trim()
+            }
+
             if (author != null && title != null) {
+                Document.executeUpdate("Delete Document d where d.reportId='" + reportId + "'")
                 Document d = new Document()
                 d.reportId = reportId
                 d.title = title
@@ -130,7 +162,11 @@ class DocumentController {
 
     def save() {
         def documentInstance = new Document(params)
-        documentInstance.number = Integer.valueOf(params.reportId.substring(2, params.reportId.length()).trim())
+        String tmp = params.reportId.substring(2, params.reportId.length()).trim()
+        for (char c : tmp.getChars()) {
+            if (c.isLetter()) tmp = tmp.replace(c, (char) ' ').trim()
+        }
+        documentInstance.number = Integer.valueOf(tmp)
         if (!documentInstance.save(flush: true)) {
             render(view: "create", model: [documentInstance: documentInstance])
             return
@@ -164,7 +200,11 @@ class DocumentController {
 
     def update() {
         def documentInstance = Document.get(params.id)
-        documentInstance.number = Integer.valueOf(params.reportId.substring(2, params.reportId.length()).trim())
+        String tmp = params.reportId.substring(2, params.reportId.length()).trim()
+        for (char c : tmp.getChars()) {
+            if (c.isLetter()) tmp = tmp.replace(c, (char) ' ').trim()
+        }
+        documentInstance.number = Integer.valueOf(tmp)
         if (!documentInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), params.id])
             redirect(action: "list")

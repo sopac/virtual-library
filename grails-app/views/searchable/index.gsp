@@ -103,7 +103,12 @@
                         <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}"/>
 
                         <g:set var="desc" value="${result.toString()}"/>
-                        <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}"/></g:if>
+                        <g:if test="${desc.size() >= 120}">
+                            <g:set var="desc" value="${desc[0..120] + '...'}"/>
+                        </g:if>
+                        <g:else>
+                            <g:set var="desc" value="${desc + '...'}"/>
+                        </g:else>
                         <div class="name"><a href="${link}">${desc.encodeAsHTML()}</a></div>
 
                         <div class="displayLink">${Document.get(result.id).author}, ${Document.get(result.id).created}</div>

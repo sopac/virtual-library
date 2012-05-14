@@ -47,22 +47,19 @@ public class ThumbnailGenerator {
             //bufferedImage = resizeImage(bufferedImage, BufferedImage.TYPE_INT_RGB);
 
             File of = new File(outDirectory + "/" + outJpgFile);
-            if (!of.exists()) {
-                ImageIO.write(bufferedImage, "jpg", of);
-            }
+            if (of.exists()) of.delete();
+            ImageIO.write(bufferedImage, "jpg", of);
+
 
             //mogrify
             ProcessBuilder pb = new ProcessBuilder();
-
             String mogrify_path = "/opt/local/bin/mogrify";
             String os = System.getProperty("os.name");
             if (os.toLowerCase().trim().equals("linux")) mogrify_path = "/usr/bin/mogrify";
-
             String[] command = {mogrify_path, "-resize", "200x", outDirectory + "/" + outJpgFile};
             pb.command(command);
             pb.directory(new File(outDirectory));
             Process p = pb.start();
-
             //Read out dir output
             InputStream is = p.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
@@ -85,6 +82,35 @@ public class ThumbnailGenerator {
 
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
+
+
+    public static void resize(String filePath) {
+        try {
+            ProcessBuilder pb = new ProcessBuilder();
+            String mogrify_path = "/opt/local/bin/mogrify";
+            String os = System.getProperty("os.name");
+            if (os.toLowerCase().trim().equals("linux")) mogrify_path = "/usr/bin/mogrify";
+            String[] command = {mogrify_path, "-resize", "200x", filePath};
+            pb.command(command);
+            pb.directory(new File(filePath.substring(0, filePath.lastIndexOf("/"))));
+            Process p = pb.start();
+            //Read out dir output
+            InputStream is = p.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String line;
+            System.out.printf("Output of running %s is:\n", Arrays.toString(command));
+            while ((line = br.readLine()) != null) {
+                System.out.println("mogrify -> " + line);
+            }
+            //Wait to get exit value
+            int exitValue = p.waitFor();
+            System.out.println("\n\nThumbnail Resized .Exit Value is " + exitValue);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 
