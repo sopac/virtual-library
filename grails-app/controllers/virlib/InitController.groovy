@@ -112,7 +112,7 @@ class InitController {
                 def localFile = file
                 InputStream input = new FileInputStream(localFile);
                 ContentHandler textHandler = new BodyContentHandler(-1);
-                Metadata metadata = new Metadata();
+
                 PDFParser parser = new PDFParser();
                 parser.parse(input, textHandler, metadata);
                 input.close();

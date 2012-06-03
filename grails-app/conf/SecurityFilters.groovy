@@ -41,6 +41,7 @@ class SecurityFilters {
                 }
             }
         }
+        /*
         useraccount(controller: 'userAccount', action: '*') {
             before = {
                 if (!session.user || session.user == null) {
@@ -49,6 +50,7 @@ class SecurityFilters {
                 }
             }
         }
+        */
 
     }
 

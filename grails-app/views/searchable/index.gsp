@@ -24,7 +24,9 @@
 <div align="left" style="margin-left: 20px" id="header">
     <h1>Search Results</h1>
     <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
-        <g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search"/>
+        <g:textField name="q" value="${params.q}" size="50"/>
+        <input class="ui-state-default ui-corner-all" type="submit" value="Search"/>
+        <input type="button" value="?" class="ui-state-default ui-corner-all" onclick="window.location = '${createLink(controller: 'userAccount', action: 'help')}'"/>
     </g:form>
     <div style="clear: both; display: none;" class="hint">See <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">Lucene query syntax</a> for advanced queries
     </div>
@@ -103,7 +105,7 @@
                         <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}"/>
 
                         <g:set var="desc" value="${result.toString()}"/>
-                        <g:if test="${desc.size() >= 120}">
+                        <g:if test="${desc.size() > 120}">
                             <g:set var="desc" value="${desc[0..120] + '...'}"/>
                         </g:if>
                         <g:else>

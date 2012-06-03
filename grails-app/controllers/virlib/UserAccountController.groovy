@@ -4,6 +4,10 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class UserAccountController {
 
+    def help() {
+
+    }
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

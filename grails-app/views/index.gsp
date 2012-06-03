@@ -141,10 +141,8 @@
     <h1>SOPAC Virtual Library</h1>
     <ul>
         <p align="justify">
-            Welcome to the SOPAC Division's <b>Virtual Library</b>,
-        maintained by Publication and Library Section with the goal of publishing and providing access to corporate, work programme and promotional reports and publications.
-        %{--The service also holds a special geoscientific library for the Pacific Island Countries and Territories and staff containing current collection of reports, charts, maps, seismic sections, research cruise tracks, cores and other data records from geoscientific surveys. --}%
-        As such it is the most frequently used entry point for enquiries regarding access to products and services, and is greatly facilitated through a user-friendly web portal.
+            Welcome to the SOPAC Division's <b>Virtual Library</b>.
+        It is maintained by the Publications and Library Section so that Division staff may see the status of their submitted reports; and to provide interested parties with a view of the latest reports as they are published. As such it is the most frequently used entry point for enquiries regarding access to products and services, and is greatly facilitated through a user-friendly web portal.
         To access SOPAC Commission's legacy reports, please browse <a href="http://www.sopac.org/index.php/virtual-library">SOPAC Commission Closed Collection</a>. For additional queries and requests email <a href="mailto:datarequest.sopac.org">datarequest@sopac.org</a>
         </p>
         <br/>
@@ -179,12 +177,14 @@
     </div>
 
 
-    <div width="90%" align="left" style="margin-left: 40px; margin-top: 250px">
+    <div width="90%" align="left" style="margin-left: 20px; margin-top: 250px">
         <h1 style="margin-left: -50px; margin-bottom: 15px">Search Documents</h1>
         <g:form controller="searchable">
             <g:textField style="width: 480px" name="q" class="ui-state-default ui-corner-all"/>
             <g:submitButton name="Go" class="ui-state-default ui-corner-all"/>
+            <input type="button" value="?" class="ui-state-default ui-corner-all" onclick="window.location = '${createLink(controller: 'userAccount', action: 'help')}'"/>
         </g:form>
+
     </div>
 
 <!-- logged in -->
@@ -222,7 +222,7 @@
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
                     <a style="color: gray; text-decoration: none" target="_blank" href="${createLink(controller: 'export')}">Export</a><br/><br/>
                     <a style="color: gray; text-decoration: none" href="${createLink(controller: 'init', action: 'regenerate')}">Regenerate Thumbnails</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'login')}">Usage Reports</a><br/><br/>
+                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'reindex')}">Rebuild Search Index</a><br/><br/>
                     %{--<i>Not Logged In</i>--}%
                 </td>
             </tr>

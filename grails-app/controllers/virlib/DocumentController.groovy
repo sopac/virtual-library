@@ -26,10 +26,12 @@ class DocumentController {
         }
         String path = servletContext.getRealPath("images/thumbnail/") + "/"
         File file = new File(path + params.reportId.trim() + ".jpg");
+        if (file.exists()) file.delete();
         f.transferTo(file)
 
         //resize
         ThumbnailGenerator.resize(file.getAbsolutePath().toString());
+
         flash.message = "Thumbnail changed..."
         Document d = Document.findByReportId(params.reportId.trim())
         redirect(action: 'show', id: d.id)
