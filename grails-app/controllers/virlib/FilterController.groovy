@@ -33,7 +33,7 @@ class FilterController {
                 list << d
             }
         }
-        [documentInstanceList: list, documentInstanceTotal: list.size(), count: list.size()]
+        [documentInstanceList: list, documentInstanceTotal: list.size(), count: list.size(), year: year, month: params.month]
 
     }
 }

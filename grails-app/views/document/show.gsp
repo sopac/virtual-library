@@ -28,11 +28,14 @@
         <li class="fieldcontain">
             <span class="property-value" aria-labelledby="category-label">
                 <g:if test="${documentInstance.file.trim().equals("")}">
-                    <p style="color: red">Restricted Document</p>
+                    <p style="color: red">Restricted Document</p><br/>
+                    <g:if test="${new java.io.File("/var/lib/tomcat6/webapps/ROOT/VirLibThumb/" + documentInstance.reportId + ".jpg").exists()}">
+                        <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
+                    </g:if>
                 </g:if>
                 <g:else>
                     <a href="${createLink(controller: 'download', params: [file: documentInstance.file, id: documentInstance.id])}">
-                        <g:img border="3px" style="height: 100px; border: 3px; border-color: #000000;" dir="images/thumbnail" file="${documentInstance.reportId}.jpg"/>
+                        <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
                     </a>
                 </g:else>
             </span>

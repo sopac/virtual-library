@@ -1,5 +1,6 @@
-import java.text.SimpleDateFormat
 import virlib.Document
+
+import java.text.SimpleDateFormat
 
 /**
  * Created by IntelliJ IDEA.
@@ -34,5 +35,8 @@ class Global {
 
         return res.subList(0, 9)
     }
+
+
+
 
 }

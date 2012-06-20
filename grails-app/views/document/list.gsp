@@ -60,13 +60,16 @@
 
                 <td>
                     <g:if test="${documentInstance.file.trim().equals("")}">
-                        <p style="color: red">Restricted Document</p>
+                        <p style="color: red">Restricted Document</p><br/>
+                        <g:if test="${new java.io.File("/var/lib/tomcat6/webapps/ROOT/VirLibThumb/" + documentInstance.reportId + ".jpg").exists()}">
+                            <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
+                        </g:if>
                     </g:if>
-                    <g:elseif test="${!new java.io.File(application.getRealPath("images/thumbnail") + "/" + documentInstance.reportId + ".jpg").exists()}">
+                    <g:elseif test="${!new java.io.File("/var/lib/tomcat6/webapps/ROOT/VirLibThumb/" + documentInstance.reportId + ".jpg").exists()}">
                         <p>Thumbnail Not Available</p>
                     </g:elseif>
                     <g:else>
-                        <g:img border="3px" style="height: 100px; border: 1px; border-color: #000000" dir="images/thumbnail" file="${documentInstance.reportId}.jpg"/>
+                        <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
                     </g:else>
                 </td>
 

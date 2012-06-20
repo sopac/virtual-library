@@ -24,7 +24,8 @@ class DocumentController {
             render(view: 'create')
             return
         }
-        String path = servletContext.getRealPath("images/thumbnail/") + "/"
+        //String path = servletContext.getRealPath("images/thumbnail/") + "/"
+        String path = "/var/lib/tomcat6/webapps/ROOT/VirLibThumb/";
         File file = new File(path + params.reportId.trim() + ".jpg");
         if (file.exists()) file.delete();
         f.transferTo(file)
@@ -109,7 +110,7 @@ class DocumentController {
                 d.save(failOnError: true, flush: true)
             }
             //generate thumbnail
-            String thumbnailPath = servletContext.getRealPath("/images/thumbnail/") + "/"
+            String thumbnailPath = "/var/lib/tomcat6/webapps/ROOT/VirLibThumb/"; //servletContext.getRealPath("/images/thumbnail/") + "/"
             //render "<h1>" + thumbnailPath + "</h1>"
             org.sopac.virlib.ThumbnailGenerator.generateThumbnailPDF(path + filename, thumbnailPath, reportId + ".jpg")
 
@@ -139,6 +140,13 @@ class DocumentController {
 
     def index() {
         redirect(action: "list", params: params)
+    }
+
+    def listAuthor() {
+        params.sort = "number"
+        def docs = Document.findAllByAuthor(params.author, params)
+        int count = docs.size()
+        [documentInstanceList: docs, documentInstanceTotal: count, count: count, author: params.author]
     }
 
     def list() {
@@ -230,6 +238,15 @@ class DocumentController {
             render(view: "edit", model: [documentInstance: documentInstance])
             return
         }
+
+        //update thumbnail
+        /*
+        String path = "/opt/virlib/"
+        String filename = documentInstance.file
+        String reportId = documentInstance.id.toString()
+        String thumbnailPath = "/var/lib/tomcat6/webapps/ROOT/VirLibThumb/"; //servletContext.getRealPath("/images/thumbnail/") + "/"
+        org.sopac.virlib.ThumbnailGenerator.generateThumbnailPDF(path + filename, thumbnailPath, reportId + ".jpg")
+        */
 
         flash.message = message(code: 'default.updated.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
         redirect(action: "show", id: documentInstance.id)

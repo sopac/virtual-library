@@ -82,6 +82,7 @@
     </orderEntry>
     <orderEntry type="module" module-name="VirLib-grailsPlugins" />
     <orderEntry type="library" name="grails-2.0.3" level="application" />
+    <orderEntry type="library" name="grails-2.0.4" level="application" />
   </component>
 </module>
 

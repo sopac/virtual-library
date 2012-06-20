@@ -5,11 +5,7 @@
     <meta name="layout" content="main"/>
     <title>Welcome to Grails</title>
 
-
-
-    <g:javascript library="jquery"/>
-    <jqui:resources/>
-
+    <resource:tabView/>
 
     <style type="text/css" media="screen">
     #status {
@@ -109,7 +105,7 @@
     #selectable li {
         margin: 3px;
         padding: 4px;
-        float: left;
+        float: none;
         width: 190px;
         height: 220px;
         /*font-size: 4em;*/
@@ -118,11 +114,6 @@
 
     </style>
 
-    <script>
-        $(function () {
-            $("#selectable").selectable();
-        });
-    </script>
 </head>
 
 <body>
@@ -152,117 +143,149 @@
 </div>
 
 <div id="page-body" align="left" role="main">
-    <h1>Browse Collections</h1>
 
+    <richui:tabView id="tabView">
+        <richui:tabLabels>
+            <richui:tabLabel selected="true" title="Browse by Collection"/>
+            <richui:tabLabel title="Browse by Authors"/>
+            <richui:tabLabel title="Browse by Publication Date"/>
+            <richui:tabLabel title="Recent Documents"/>
+            <richui:tabLabel title="Search"/>
+        </richui:tabLabels>
 
-    <div align="left">
-        <ol id="selectable">
-            <g:each in="${virlib.Category.list()}" var="c">
-                <a style="text-decoration: none" href="${createLink(controller: 'document', action: 'list', params: [code: c.code])}">
-                    <li class="ui-state-default">
-                        <br/>
-                        <img height="60px" src="${resource(dir: 'images', file: c.code + '.png')}"/>
-                        <br/>
-                        ${c.name}
-                        <br/>
+        <richui:tabContents>
+            <richui:tabContent>
+                <h1>Browse By Collection</h1>
 
-                        <div style="font: small;color: #a9a9a9; font-weight: 100;">
-                            <br/>
-                            ${c.description}
+                <ol align="center">
+                    <g:each in="${virlib.Category.list()}" var="c">
+                        <a style="text-decoration: none" href="${createLink(controller: 'document', action: 'list', params: [code: c.code])}">
+                            <li align="center">
+                                <p align="center" style="text-align: center;">
+                                    <br/>
+                                    <img height="60px" align="center" src="${resource(dir: 'images', file: c.code + '.png')}"/>
+                                    <br/>
+                                    <b>${c.name}</b>
+                                </p>
+
+                                <div align="center" style="font: small;color: #808080; font-weight: 100;">
+                                    <p align="center" style="width: 75%; text-align: center;">${c.description}</p>
+                                </div>
+                            </li>
+                        </a>
+                    </g:each>
+                </ol>
+            </richui:tabContent>
+
+            <richui:tabContent>
+                <h1>Browse By Authors</h1>
+                <br/>
+
+                <div style="margin-left: 20px">
+                    <g:each in="${virlib.Document.executeQuery('select distinct d.author from Document d order by d.author')}" var="d">
+                        <a href="${createLink(controller: 'document', action: 'listAuthor', params: ['author': d])}">${d}</a> (${virlib.Document.findAllByAuthor(d).size()})
+                        <br/>
+                    </g:each>
+                </div>
+
+            </richui:tabContent>
+
+            <richui:tabContent>
+                <h1>Browse By Publication Date</h1>
+                <br/>
+
+                <div align="center" style="width: 100%; ">
+                    <g:form action="doFilter" controller="filter" method="post">
+                        <div class="dialog">
+                            <table style="width: 200px">
+                                <tr class='prop'>
+                                    <td valign='top' style='text-align: left;'><label
+                                            for='month'>Select Month:</label></td>
+                                    <td valign='top' style='text-align: left;''>
+
+                                <g:select name="month" from="${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']}"/>
+
+                                </td>
+                                </tr>
+                                <tr class='prop'>
+                                    <td valign='top' style='text-align: left;'><label
+                                            for='year'>Select Year:</label></td>
+                                    <td valign='top' style='text-align: left;'>
+                                        <input id="year" style="width: 40px" name='year' value="2012"/>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
-                    </li>
-                </a>
-            </g:each>
-        </ol>
-    </div>
+
+                        <div class="buttons" style="width: 60px">
+                            <span align="right" class="button">
+                                <input type="submit" value="Filter"/>
+                            </span></div>
+                    </g:form>
+                </div>
+
+            </richui:tabContent>
+
+            <richui:tabContent>
+                <h1>Recent Documents</h1>
+                <br/>
+                <g:each in="${Document.list(max: 15, sort: 'number', order: 'desc')}" var="d" status="i">
+                    <span align="right" style="text-align: right; margin-left: 10px">
+                        <g:set var="color" value="blue"/>
+                        <g:if test="${d.file.trim().equals("")}">
+                            <g:set var="color" value="red"/>
+                        </g:if>
+                        <a style="color: ${color};  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
+                        <g:if test="${d.title.length() >= 100}">
+                            ${d.title.substring(0, 100)}
+                        </g:if>
+                        <g:else>
+                            ${d.title}
+                        </g:else>
+                        ...</a>
+                        <br/><br/>
+                    </span>
+                </g:each>
+            </richui:tabContent>
+
+            <richui:tabContent>
+                <h1>Search</h1>
+                <br/>
+
+                <div align="center">
+                    <g:form controller="searchable">
+                        <g:textField style="width: 480px" name="q" class="ui-state-default ui-corner-all"/>
+                        <g:submitButton name="Go" class="ui-state-default ui-corner-all"/>
+                        <input type="button" value="?" class="ui-state-default ui-corner-all" onclick="window.location = '${createLink(controller: 'userAccount', action: 'help')}'"/>
+                    </g:form>
+                </div>
+            </richui:tabContent>
+
+        </richui:tabContents>
+    </richui:tabView>
+
+</div>
 
 
-    <div width="90%" align="left" style="margin-left: 20px; margin-top: 250px">
-        <h1 style="margin-left: -50px; margin-bottom: 15px">Search Documents</h1>
-        <g:form controller="searchable">
-            <g:textField style="width: 480px" name="q" class="ui-state-default ui-corner-all"/>
-            <g:submitButton name="Go" class="ui-state-default ui-corner-all"/>
-            <input type="button" value="?" class="ui-state-default ui-corner-all" onclick="window.location = '${createLink(controller: 'userAccount', action: 'help')}'"/>
-        </g:form>
 
-    </div>
 
 <!-- logged in -->
+<div align="right" style="width: 95%">
     <g:if test="${session.user != null}">
-        <table id="sdsds" align="left" style="width: 90%;border-top: 0px;align: left; margin-left: -15px">
-            <tr>
-                <td style="width: 70%"><h1>Recent Documents</h1></td>
-                <td><h1>For Administrators</h1></td>
-            </tr>
-            <tr style="background-color: #ffffff;">
-                <td>
-                    <g:each in="${Document.list(max: 14, sort: 'number', order: 'desc')}" var="d" status="i">
-                    %{--${i + 1}.--}%
-                        <span align="right" style="text-align: left; margin-left: 0px">
-                            <g:set var="color" value="blue"/>
-                            <g:if test="${d.file.trim().equals("")}">
-                                <g:set var="color" value="red"/>
-                            </g:if>
-                            <a style="color: ${color};  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
-                            <g:if test="${d.title.length() >= 52}">
-                                ${d.title.substring(0, 52)}
-                            </g:if>
-                            <g:else>
-                                ${d.title}
-                            </g:else>
-                            ...</a>
-                            <br/>
-                        </span>
-                    </g:each>
-                </td>
-                <td>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'document')}">Documents</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" target="_blank" href="${createLink(controller: 'export')}">Export</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'init', action: 'regenerate')}">Regenerate Thumbnails</a><br/><br/>
-                    <a style="color: gray; text-decoration: none" href="${createLink(controller: 'reindex')}">Rebuild Search Index</a><br/><br/>
-                    %{--<i>Not Logged In</i>--}%
-                </td>
-            </tr>
-        </table>
+        <h1>For Administrators</h1>
+        <br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'document')}">Documents</a><br/><br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'category')}">Categories</a><br/><br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'userAccount')}">Users</a><br/><br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'filter')}">Filter</a><br/><br/>
+        <a style="color: gray; text-decoration: none" target="_blank" href="${createLink(controller: 'export')}">Export</a><br/><br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'init', action: 'regenerate')}">Regenerate Thumbnails</a><br/><br/>
+        <a style="color: gray; text-decoration: none" href="${createLink(controller: 'reindex')}">Rebuild Search Index</a>
     </g:if>
+</div>
 
 
-<!-- not logged in -->
-    <g:if test="${session.user == null}">
-        <table id="sdsds" align="left" style="width: 90%;border-top: 0px;align: left; margin-left: -15px">
-            <tr>
-                <td style="width: 100%"><h1>Recent Documents</h1></td>
-                <td></td>
-            </tr>
-            <tr style="background-color: #ffffff;">
-                <td>
-                    <g:each in="${Document.list(max: 9, sort: 'number', order: 'desc')}" var="d" status="i">
-                        ${i + 1}.
-                        <span align="right" style="text-align: right; margin-left: 10px">
-                            <g:set var="color" value="blue"/>
-                            <g:if test="${d.file.trim().equals("")}">
-                                <g:set var="color" value="red"/>
-                            </g:if>
-                            <a style="color: ${color};  text-decoration: none;" href="${createLink(controller: 'document', action: 'show', id: d.id)}">(${d.reportId})
-                            <g:if test="${d.title.length() >= 78}">
-                                ${d.title.substring(0, 78)}
-                            </g:if>
-                            <g:else>
-                                ${d.title}
-                            </g:else>
-                            ...</a>
-                            <br/>
-                        </span>
-                    </g:each>
-                </td>
-                <td>
-                </td>
-            </tr>
-        </table>
-    </g:if>
+
 
 
 
@@ -270,13 +293,13 @@
 
 
 <!--
-    <div id="controller-list" role="navigation">
-        <h2>Available Controllers:</h2>
-        <ul>
-            <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName }}">
+<div id="controller-list" role="navigation">
+<h2>Available Controllers:</h2>
+<ul>
+<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName }}">
     <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 </g:each>
-        </ul>
+</ul>
     </div>
     -->
 </div>

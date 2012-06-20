@@ -1,4 +1,5 @@
 <%@ page import="virlib.Document" %>
+<%@ page import="virlib.Category" %>
 <!doctype html>
 <html>
 <head>
@@ -18,24 +19,23 @@
 </div>
 
 <div id="list-document" class="content scaffold-list" role="main">
-    <h1>Listing ${month}, ${year} Documents (${count})</h1>
-    <g:if test="${flash.message}">
-        <div class="message" role="status">${flash.message}</div>
-    </g:if>
+
+    <h1>Listing ${author} Documents (${count})</h1>
+
 
     <table>
         <thead>
         <tr>
 
-            <th></th>
-
-            <th><g:message code="document.category.label" default="Category"/></th>
-
             <g:sortableColumn params="[code: code]" property="reportId" title="${message(code: 'document.reportId.label', default: 'Report Id')}"/>
+
+            <g:sortableColumn params="[code: code]" property="reportId" title="${message(code: 'document.reportId.label', default: 'Published')}"/>
 
             <g:sortableColumn params="[code: code]" property="title" title="${message(code: 'document.title.label', default: 'Title')}"/>
 
             <g:sortableColumn params="[code: code]" property="author" title="${message(code: 'document.author.label', default: 'Author')}"/>
+
+            <th></th>
 
         </tr>
         </thead>
@@ -43,17 +43,26 @@
         <g:each in="${documentInstanceList}" status="i" var="documentInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                <td>
-                    <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
-                </td>
-
-                <td><g:link action="show" controller="document" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "category")}</g:link></td>
-
                 <td>${fieldValue(bean: documentInstance, field: "reportId")}</td>
 
-                <td><g:link action="show" controller="document" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link></td>
+                <td>${fieldValue(bean: documentInstance, field: "publicationMonth")},<br/>${documentInstance.publicationYear}
+                </td>
+
+                <td><g:link action="show" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link></td>
 
                 <td>${fieldValue(bean: documentInstance, field: "author")}</td>
+
+                <td>
+                    <g:if test="${documentInstance.file.trim().equals("")}">
+                        <p style="color: red">Restricted Document</p>
+                    </g:if>
+                    <g:elseif test="${!new java.io.File("/var/lib/tomcat6/webapps/ROOT/VirLibThumb/" + documentInstance.reportId + ".jpg").exists()}">
+                        <p>Thumbnail Not Available</p>
+                    </g:elseif>
+                    <g:else>
+                        <img border="3px" style="height: 100px; border: 1px; border-color: #000000" src="http://ict.sopac.org/VirLibThumb/${documentInstance.reportId}.jpg"/>
+                    </g:else>
+                </td>
 
             </tr>
         </g:each>
@@ -61,7 +70,8 @@
     </table>
 
     <div class="pagination">
-        ${count} Documents.
+        ${count} reports
+        %{--<g:paginate params="[code: code]" total="${documentInstanceTotal}"/>--}%
     </div>
 </div>
 </body>

@@ -4,11 +4,10 @@
     <facet type="web" name="GrailsWeb">
       <configuration>
         <webroots>
-          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/grails-app/views" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-ui-1.8.15/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/richui-0.8/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/web-app" relative="/" />
         </webroots>
-        <sourceRoots />
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
@@ -22,43 +21,16 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/hibernate-2.0.3">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/hibernate-2.0.3/grails-app/i18n" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-1.7.1/grails-app/taglib" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-ui-1.8.15">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-ui-1.8.15/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/jquery-ui-1.8.15/grails-app/taglib" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/resources-1.1.6">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/resources-1.1.6/src/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/resources-1.1.6/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/resources-1.1.6/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/resources-1.1.6/grails-app/taglib" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/src/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/grails-app/controllers" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/grails-app/services" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/tomcat-2.0.3" />
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/webxml-1.4.1">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
-    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.0.1" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.0.3" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="grails-2.0.4" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (VirLib-grailsPlugins)">
         <CLASSES>
           <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/lib" />
+          <root url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/richui-0.8/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/postgresql/postgresql/jars/postgresql-9.1-901.jdbc4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.swinglabs/pdf-renderer/jars/pdf-renderer-1.0.5.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/jdom/jdom/jars/jdom-1.0.jar!/" />
@@ -88,6 +60,7 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/richui-0.8/lib" recursive="false" />
         <jarDirectory url="file://$USER_HOME$/.grails/2.0.3/projects/VirLib/plugins/searchable-0.6.3/lib" recursive="false" />
       </library>
     </orderEntry>
