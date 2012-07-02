@@ -23,7 +23,7 @@ class LoginController {
                 l.timeStamp = new Date()
                 l.save()
                 */
-                redirect(uri: "/")
+                redirect(controller: "welcome")
             } else {
                 flash.message = "Invalid username and/or password, please try again"
                 redirect(controller: 'login', action: 'index')
@@ -42,7 +42,7 @@ class LoginController {
         session['organisation'] = null
         session['admin'] = false
         flash.message = tmp + " Logged Out..."
-        redirect(uri: '/')
+        redirect(controller: "welcome")
     }
 }
 
